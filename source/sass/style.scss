@@ -1,4 +1,10 @@
 // Vendor
-// ---------------------------------
-
 @import "vendor/normalize";
+
+// Common
+@import "./common/fonts.scss";
+@import "./common/variables.scss";
+@import "./common/global.scss";
+@import "./common/mixins.scss";
+
+// Blocks
