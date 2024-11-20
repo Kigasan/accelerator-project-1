@@ -1,0 +1,79 @@
+.tab {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  background-color: $background-primary;
+  box-sizing: border-box;
+  min-width: 290px;
+  max-width: 380px;
+  padding: 50px 42px;
+
+  @media (min-width: $min-tablet-width) {
+    padding: 65px;
+    gap: 22px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 360px;
+    gap: 17px;
+  }
+}
+
+.tab__title {
+  @include h4-font;
+  margin: 0;
+}
+
+.tab__duration {
+  @include medium-font;
+  margin: 0;
+}
+
+.tab__price {
+  @include number-medium-font;
+  margin: 0;
+  position: relative;
+  color: $additional-accent;
+  padding-top: 48px;
+  z-index: 0;
+
+  &::before {
+    content: attr(data-price);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    @include number-extralarge-font;
+    color: $tab-price-shadow;
+    z-index: -1;
+  }
+
+  @media (min-width: $min-tablet-width) {
+    padding-top: 60px;
+  }
+}
+
+.tab__price-icon {
+  width: 24px;
+  height: 33px;
+
+  @media (min-width: $min-tablet-width) {
+    width: 30px;
+    height: 42px;
+  }
+}
+
+.tab__button {
+  width: 100%;
+  height: 66px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  @include button-medium-font;
+  background-color: transparent;
+  color: $primary-color;
+  text-decoration: none;
+  border: 2px solid $button-primary-dark-border;
+}

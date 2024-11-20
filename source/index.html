@@ -41,7 +41,6 @@
           </section>
         </div>
       </section>
-
       <section class="about" data-test="about">
         <div class="container about__container">
           <div class="about__content">
@@ -82,8 +81,51 @@
           referrerpolicy="strict-origin-when-cross-origin" loading="lazy"></iframe>
         </div>
       </section>
+
       <section class="price" data-test="price">
-        <div class="container"></div>
+        <div class="container price__container">
+          <h2 class="price__title">Абонементы</h2>
+          <div class="price__tab-buttons">
+            <button type="button" class="price__tab-button price__tab-button--active" id="tab-1month-button">1 месяц</button>
+            <button type="button" class="price__tab-button" id="tab-6months-button">6 месяцев</button>
+            <button type="button" class="price__tab-button" id="tab-12months-button">12 месяцев</button>
+          </div>
+          <ul class="price__tab-list list-reset">
+            <li class="price__tab tab">
+              <h3 class="tab__title">С тренером</h3>
+              <p class="tab__duration">12 занятий</p>
+              <p class="tab__price" data-price="5000">
+                <span class="tab__price-value">5000</span>
+                <svg class="tab__price-icon">
+                  <use href="/__spritemap#sprite-rubble"></use>
+                </svg>
+              </p>
+              <a href="#" class="tab__button">Купить абонемент</a>
+            </li>
+            <li class="price__tab tab">
+              <h3 class="tab__title">Дневной</h3>
+              <p class="tab__duration">с 8:00 до 17:00</p>
+              <p class="tab__price" data-price="1700">
+                <span class="tab__price-value">1700</span>
+                <svg class="tab__price-icon">
+                  <use href="/__spritemap#sprite-rubble"></use>
+                </svg>
+              </p>
+              <a href="#" class="tab__button">Купить абонемент</a>
+            </li>
+            <li class="price__tab tab">
+              <h3 class="tab__title">Полный день</h3>
+              <p class="tab__duration">с 8:00 до 22:00</p>
+              <p class="tab__price" data-price="2700">
+                <span class="tab__price-value">2700</span>
+                <svg class="tab__price-icon">
+                  <use href="/__spritemap#sprite-rubble"></use>
+                </svg>
+              </p>
+              <a href="#" class="tab__button">Купить абонемент</a>
+            </li>
+          </ul>
+        </div>
       </section>
       <section class="games" data-test="games">
         <div class="container"></div>

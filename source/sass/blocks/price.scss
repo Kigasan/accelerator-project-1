@@ -1,0 +1,99 @@
+.price {
+  text-align: center;
+  background-color: $background-secondary;
+
+  @media (min-width: $min-tablet-width) {
+    background-image: image-set(
+      url('../../img/price-background-tablet@1x.webp') 1x type('image/webp'),
+      url('../../img/price-background-tablet@2x.webp') 2x type('image/webp'),
+      url('../../img/price-background-tablet@1x.png') 1x type('image/png'),
+      url('../../img/price-background-tablet@2x.png') 1x type('image/png')
+    );
+    background-repeat: no-repeat;
+    background-position: bottom right;
+  }
+
+  @media (min-width: $desktop-width) {
+    background-image: image-set(
+      url('../../img/price-background-desktop@1x.webp') 1x type('image/webp'),
+      url('../../img/price-background-desktop@2x.webp') 2x type('image/webp'),
+      url('../../img/price-background-desktop@1x.png') 1x type('image/png'),
+      url('../../img/price-background-desktop@2x.png') 1x type('image/png')
+    );
+  }
+}
+
+.price__container {
+  padding: 40px 15px;
+
+  @media (min-width: $min-tablet-width) {
+    padding: 60px 194px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 100px 103px;
+  }
+}
+
+.price__title {
+  @include h3-font;
+  margin: 0;
+  margin-bottom: 32px;
+
+  @media (min-width: $min-tablet-width) {
+    margin-bottom: 37px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 22px;
+  }
+}
+
+.price__tab-buttons {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 2px solid rgba($tab-default, 0.2);
+  margin-bottom: 30px;
+
+  @media (min-width: $min-tablet-width) {
+    width: 310px;
+    margin: 0 auto 45px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 350px;
+    margin-bottom: 40px;
+  }
+}
+
+.price__tab-button {
+  @include tabs-lined-font;
+  color: rgba($primary-color, 0.5);
+  background-color: transparent;
+  border: none;
+  padding: 0;
+  padding-bottom: 6px;
+}
+
+.price__tab-button--active {
+  color: $primary-color;
+  border-bottom: 2px solid $tab-state;
+  margin-bottom: -2px;
+}
+
+.price__tab-list {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  row-gap: 35px;
+
+  @media (min-width: $min-tablet-width) {
+    row-gap: 40px;
+  }
+
+  @media (min-width: $desktop-width) {
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 40px;
+  }
+}

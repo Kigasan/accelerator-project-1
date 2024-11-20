@@ -81,7 +81,7 @@
     text-underline-offset: 6px;
   }
 
-  &:disabled {
+  &:not([href]):disabled {
     color: $background-secondary;
   }
 }
