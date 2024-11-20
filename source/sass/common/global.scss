@@ -10,14 +10,14 @@ body {
   background-color: $background-primary;
 }
 
-a {
-  display: block;
-}
-
 img {
   max-width: 100%;
   height: auto;
   object-fit: cover;
+}
+
+picture {
+  display: inline-block;
 }
 
 .wrapper {

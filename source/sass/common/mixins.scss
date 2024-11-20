@@ -184,14 +184,6 @@
   line-height: 12px;
   font-weight: 700;
   text-transform: uppercase;
-
-  @media (min-width: $min-tablet-width) {
-    letter-spacing: 0.6px;
-  }
-
-  @media (min-width: $desktop-width) {
-    letter-spacing: normal;
-  }
 }
 
 @mixin number-extralarge-font {
