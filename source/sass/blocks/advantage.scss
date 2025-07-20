@@ -1,0 +1,19 @@
+.advantage__value {
+  @include number-large-font;
+  background-image: linear-gradient(to right, $additional-gradient-start 0%, $additional-gradient-end 100%);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.advantage__measure {
+  @include small-font;
+  color: $description-color;
+}
+
+.advantage__title {
+  @include h6-font;
+}
+
+.advantage__subtitle {
+  @include medium-font;
+}

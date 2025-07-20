@@ -136,6 +136,13 @@
   }
 }
 
+@mixin xs-font {
+  font-family: $font-secondary;
+  font-size: 12px;
+  line-height: 12px;
+  font-weight: 400;
+}
+
 @mixin tabs-lined-font {
   font-family: $font-secondary;
   font-size: 16px;

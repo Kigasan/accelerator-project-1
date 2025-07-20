@@ -30,7 +30,7 @@
               <p class="hero__location">Омск</p>
               <h3 class="hero__title">Фитнес<br>центр</h3>
               <p class="hero__description">Тренажёрный зал<br>Групповые занятия<br>Кардио-зона</p>
-              <button type="button" class="hero__button button">Купить абонемент</button>
+              <a href="#abonements" class="hero__button button">Купить абонемент</a>
             </div>
             <picture>
               <source type="image/webp" media="(min-width: 1366px)" srcset="./img/hero-desktop@1x.webp 1x, ./img/hero-desktop@2x.webp 2x" width="500" height="524">
@@ -46,8 +46,10 @@
           <div class="about__content">
             <h2 class="about__title">Тренажёрный зал</h2>
             <p class="about__subtitle">Просторный зал площадью 900 кв/м</p>
-            <p class="about__description">Supergym – самый большой фитнес центр за Уралом и идеальное место для укрепления тела и здоровья. Тренажёрный зал оснащён всем необходимым современным оборудованием для всех спортсменов.</p>
-            <p class="about__description">В зале расположены отдельная зона для Crossfit и кардио-зона с 40 тренажёрами. Также в фитнес центре есть несколько оборудованных залов для различных видов групповых занятий.</p>
+            <div class="about__description">
+              <p>Supergym – самый большой фитнес центр за Уралом и идеальное место для укрепления тела и здоровья. Тренажёрный зал оснащён всем необходимым современным оборудованием для всех спортсменов.</p>
+              <p>В зале расположены отдельная зона для Crossfit и кардио-зона с 40 тренажёрами. Также в фитнес центре есть несколько оборудованных залов для различных видов групповых занятий.</p>
+            </div>
           </div>
           <picture>
             <source type="image/webp" media="(min-width: 1366px)" srcset="./img/about-us-desktop@1x.webp 1x, ./img/about-us-desktop@2x.webp 2x" width="660" height="400">
@@ -57,32 +59,30 @@
             <source type="image/jpg" media="(min-width: 768px)" srcset="./img/about-us-tablet@1x.jpg 1x, ./img/about-us-tablet@2x.jpg 2x" width="678" height="345">
             <img class="about__photo" src="./img/about-us-mobile@1x.jpg" srcset="./img/about-us-mobile@2x.jpg 2x" width="320" height="280" alt="Просторный тренажёрный зал со множеством тренажеров.">
           </picture>
-           <!-- <iframe
-           class="about__video"
-           src="https://www.youtube.com/watch?v=9TZXsZItgdw"
-           frameborder="0"
-           srcdoc="<style>
-            *{padding:0;margin:0;overflow:hidden}
-            html,body{height:100%}
-            img,span{position:absolute;width:100%;top:0;bottom:0;margin:auto}
-            span{height:1.5em;text-align:center;font:48px/1.5 sans-serif;color:white;text-shadow:0 0 0.5em black}
-            </style>
-            <a href=https://www.youtube.com/watch?v=9TZXsZItgdw>
-            <img src= alt='Demo video'>
-            <span>▶</span>
-            </a>">
-          </iframe> -->
 
-          <iframe class="about__video" width="320" height="170"
+          <div class="about__mask">
+            <svg class="about__mask-play">
+              <use href="/__spritemap#sprite-play-button"></use>
+            </svg>
+            <picture>
+              <source type="image/webp" media="(min-width: 1366px)" srcset="./img/about-us-mask-desktop@1x.webp 1x, ./img/about-us-mask-desktop@2x.webp 2x" width="360" height="230">
+              <source type="image/webp" media="(min-width: 768px)" srcset="./img/about-us-mask-tablet@1x.webp 1x, ./img/about-us-mask-tablet@2x.webp 2x" width="270" height="170">
+              <source type="image/webp" srcset="./img/about-us-mask-mobile@1x.webp 1x, ./img/about-us-mask-mobile@2x.webp 2x" width="320" height="170">
+              <source type="image/jpg" media="(min-width: 1366px)" srcset="./img/about-us-mask-desktop@1x.jpg 1x, ./img/about-us-mask-desktop@2x.jpg 2x" width="360" height="230">
+              <source type="image/jpg" media="(min-width: 768px)" srcset="./img/about-us-mask-tablet@1x.jpg 1x, ./img/about-us-mask-tablet@2x.jpg 2x" width="270" height="170">
+              <img class="about__mask-photo" src="./img/about-us-mask-mobile@1x.jpg" srcset="./img/about-us-mask-mobile@2x.jpg 2x" width="320" height="170" alt="Превью видео с видом на тренажерный зал.">
+            </picture>
+          </div>
+
+          <!-- <iframe class="about__video" width="320" height="170"
           src="https://www.youtube.com/embed/9TZXsZItgdw?si=SGC5i3jfYD-Nxsfb"
           title="YouTube video player"
           frameborder="0"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-          referrerpolicy="strict-origin-when-cross-origin" loading="lazy"></iframe>
+          referrerpolicy="strict-origin-when-cross-origin" loading="lazy"></iframe> -->
         </div>
       </section>
-
-      <section class="price" data-test="price">
+      <section class="price" id="abonements" data-test="price">
         <div class="container price__container">
           <h2 class="price__title">Абонементы</h2>
           <div class="price__tab-buttons">
@@ -128,13 +128,140 @@
         </div>
       </section>
       <section class="games" data-test="games">
-        <div class="container"></div>
+        <div class="container games__container">
+          <div class="games__content">
+            <h2 class="games__title">SUPER GAMES</h2>
+            <div class="games__date-wrapper">
+              <p class="games__date-header">Дата</p>
+              <time datetime="2019-03-07" class="games__date">
+                <span class="games__number">7</span>
+                <span class="games__month">Марта</span>
+                <span class="games__year">2019</span>
+              </time>
+              <p class="games__date-header">Время</p>
+              <time datetime="12:00" class="games__time">12:00</time>
+            </div>
+            <p class="games__description">Ежегодные соревнования по CrossFit</p>
+            <a href="#" class="games__application-link">заполнить заявку</a>
+          </div>
+          <picture>
+            <source type="image/webp" media="(min-width: 1366px)" srcset="./img/games-desktop@1x.webp 1x, ./img/games-desktop@2x.webp 2x" width="660" height="500">
+            <source type="image/webp" media="(min-width: 768px)" srcset="./img/games-tablet@1x.webp 1x, ./img/games-tablet@2x.webp 2x" width="378" height="348">
+            <source type="image/webp" srcset="./img/games-mobile@1x.webp 1x, ./img/games-mobile@2x.webp 2x" width="290" height="290">
+            <source type="image/jpg" media="(min-width: 1366px)" srcset="./img/games-desktop@1x.jpg 1x, ./img/games-desktop@2x.jpg 2x" width="660" height="500">
+            <source type="image/jpg" media="(min-width: 768px)" srcset="./img/games-tablet@1x.jpg 1x, ./img/games-tablet@2x.jpg 2x" width="378" height="348">
+            <img src="./img/games-mobile@1x.jpg" srcset="./img/games-mobile@2x.jpg 2x" alt="" width="290" height="290" class="games__picture">
+          </picture>
+        </div>
       </section>
       <section class="juri" data-test="juri">
-        <div class="container"></div>
+        <div class="container juri__container">
+          <h2 class="juri__title">Жюри</h2>
+          <div class="juri__slider slider">
+            <ul class="juri__list list-reset">
+              <li class="juri__card juri-slide">
+                <figure>
+                  <picture>
+                    <source type="image/webp" srcset="./img/juri-pavlova@1x.webp 1x, ./img/juri-pavlova@2x.webp 2x" width="260" height="300">
+                    <img class="juri-slide__image" src="./img/juri-pavlova@1x.jpg" srcset="./img/juri-pavlova@2x.jpg 2x" width="260" height="300" alt="Член жюри - Анна Павлова.">
+                  </picture>
+                  <figcaption class="juri-slide__figcaption">Анна Павлова</figcaption>
+                </figure>
+              </li>
+              <li class="juri__card juri-slide">
+                <figure>
+                  <picture>
+                    <source type="image/webp" srcset="./img/juri-lavrov@1x.webp 1x, ./img/juri-lavrov@2x.webp 2x" width="260" height="300">
+                    <img class="juri-slide__image" src="./img/juri-lavrov@1x.jpg" srcset="./img/juri-lavrov@2x.jpg 2x" width="260" height="300" alt="Член жюри - Алексей Лавров.">
+                  </picture>
+                  <figcaption class="juri-slide__figcaption">Алексей Лавров</figcaption>
+                </figure>
+              </li>
+              <li class="juri__card juri-slide">
+                <figure>
+                  <picture>
+                    <source type="image/webp" srcset="./img/juri-pashkov@1x.webp 1x, ./img/juri-pashkov@2x.webp 2x" width="260" height="300">
+                    <img class="juri-slide__image" src="./img/juri-pashkov@1x.jpg" srcset="./img/juri-pashkov@2x.jpg 2x" width="260" height="300" alt="Член жюри - Александр Пашков.">
+                  </picture>
+                  <figcaption class="juri-slide__figcaption">Александр Пашков</figcaption>
+                </figure>
+                <div class="juri-slide__mask slide-mask">
+                  <h3 class="slide-mask__title">Александр Пашков</h3>
+                  <p class="slide-mask__description">CrossFit</p>
+                  <ul class="slide-mask__advantages">
+                    <li class="slide-mask__advantage">Certified Level 3 Trainer</li>
+                    <li class="slide-mask__advantage">Победитель чемпионата России по CrossFit</li>
+                    <li class="slide-mask__advantage">Опыт — 6 лет</li>
+                  </ul>
+                </div>
+              </li>
+              <li class="juri__card juri-slide">
+                <figure>
+                  <picture>
+                    <source type="image/webp" srcset="./img/juri-ketova@1x.webp 1x, ./img/juri-ketova@2x.webp 2x" width="260" height="300">
+                    <img class="juri-slide__image" src="./img/juri-ketova@1x.jpg" srcset="./img/juri-ketova@2x.jpg 2x" width="260" height="300" alt="Член жюри - Мария Кетова.">
+                  </picture>
+                  <figcaption class="juri-slide__figcaption">Мария Кетова</figcaption>
+                </figure>
+              </li>
+            </ul>
+            <div class="slider__controls">
+              <button type="button" class="slider__previous-button"><span class="visually-hidden">предыдущий член жюри</span></button>
+              <button type="button" class="slider__next-button"><span class="visually-hidden">следующий член жюри</span></button>
+            </div>
+          </div>
+        </div>
       </section>
 
-      <div data-test="features">features</div>
+      <section class="features" data-test="features">
+        <div class="container">
+          <h2 class="features__title">Наши преимущества</h2>
+          <ul class="features__list list-reset">
+            <li class="features__item advantage">
+              <p class="advantage__statistics">
+                <span class="advantage__value">900</span>
+                <span class="advantage__measure">кв/м</span>
+              </p>
+              <h3 class="advantage__title">Площадь</h3>
+              <p class="advantage__subtitle">Занимайтесь без очередей и толкучки</p>
+            </li>
+            <li class="features__item advantage">
+              <p class="advantage__statistics">
+                <span class="advantage__value">70</span>
+                <span class="advantage__measure">машин</span>
+              </p>
+              <h3 class="advantage__title">Собственная парковка</h3>
+              <p class="advantage__subtitle">Вы всегда найдёте место для своей машины на нашей парковке</p>
+            </li>
+            <li class="features__item advantage advantage--middle">
+              <p class="advantage__statistics">
+                <span class="advantage__value">100</span>
+                <span class="advantage__measure">Тренажёров</span>
+              </p>
+              <p class="advantage__description">Современные тренажёры на все группы мышц</p>
+            </li>
+            <li class="features__item advantage">
+              <p class="advantage__statistics">
+                <span class="advantage__value">350</span>
+                <span class="advantage__measure">мест</span>
+              </p>
+              <h3 class="advantage__title">Комфорт</h3>
+              <p class="advantage__subtitle">Просторные раздевалки, душевые, фен, Wi-Fi, кулеры</p>
+            </li>
+            <li class="features__item advantage">
+              <p class="advantage__statistics">
+                <span class="advantage__value">5+</span>
+                <span class="advantage__measure">лет</span>
+              </p>
+              <h3 class="advantage__title">Тренерский опыт</h3>
+              <p class="advantage__subtitle">Добивайтесь своих целей быстрее с профессиональным тренером</p>
+            </li>
+
+          </ul>
+        </div>
+      </section>
+
+
       <div data-test="offers">offers</div>
       <div data-test="faq">faq</div>
       <div data-test="reviews">reviews</div>

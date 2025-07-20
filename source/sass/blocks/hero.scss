@@ -124,6 +124,7 @@
   padding: 0;
   @include button-medium-font;
   color: $primary-lighter;
+  text-decoration: none;
   background-color: transparent;
   border: 2px solid $button-light-border;
   display: flex;
@@ -133,6 +134,7 @@
   height: 60px;
   grid-column: 1 / -1;
   margin-top: 48px;
+  box-sizing: border-box;
 
   &:hover {
     color: $additional-accent;

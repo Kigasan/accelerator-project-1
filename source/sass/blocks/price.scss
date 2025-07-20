@@ -73,12 +73,33 @@
   border: none;
   padding: 0;
   padding-bottom: 6px;
+  margin-bottom: -2px;
+  border-bottom: 2px solid transparent;
+
+  &:hover {
+    color: rgba($primary-color, 0.7);
+    border-bottom: 2px solid $tab-default;
+  }
+
+  &:focus {
+    outline: none;
+    color: $primary-color;
+    border-bottom: 2px solid $primary-color;
+  }
+
+  &:active {
+    border-bottom: 2px solid $tab-state;
+  }
+
+  &:disabled {
+    color: rgba($primary-color, 0.3);
+    border-bottom: 2px solid rgba($primary-color, 0.1);
+  }
 }
 
 .price__tab-button--active {
   color: $primary-color;
   border-bottom: 2px solid $tab-state;
-  margin-bottom: -2px;
 }
 
 .price__tab-list {

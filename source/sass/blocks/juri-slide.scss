@@ -1,0 +1,19 @@
+.juri-slide {
+  width: 260px;
+  height: 300px;
+}
+
+.juri-slide figure {
+  margin: 0;
+  width: 260px;
+}
+
+.juri-slide__figcaption {
+  font-family: $font-secondary;
+  font-size: 22px;
+  line-height: 22px;
+  font-weight: 400;
+  color: $primary-lighter;
+  text-align: center;
+  margin-top: -53px;
+}

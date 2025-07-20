@@ -1,0 +1,56 @@
+.slider {
+  position: relative;
+  overflow: hidden;
+  padding: 0 59px;
+
+  @media (min-width: $desktop-width) {
+    padding: 0 55px;
+  }
+}
+
+.slider__controls {
+  display: none;
+
+  @media (min-width: $min-tablet-width) {
+    display: block;
+  }
+}
+
+.slider__previous-button {
+  position: absolute;
+  top: calc(50% - 16px);
+  left: 5px;
+  width: 18px;
+  height: 32px;
+  padding: 0;
+  background-color: $icons-dark;
+  border: none;
+  mask-image: url('../../img/sprite/slider-arrow.svg');
+  mask-size: 100%;
+  mask-repeat: no-repeat;
+
+  @media (min-width: $desktop-width) {
+    left: 2px;
+    top: calc(50% - 19px);
+  }
+}
+
+.slider__next-button {
+  position: absolute;
+  top: calc(50% - 16px);
+  right: 5px;
+  width: 18px;
+  height: 32px;
+  padding: 0;
+  background-color: $icons-dark;
+  border: none;
+  mask-image: url('../../img/sprite/slider-arrow.svg');
+  mask-size: 100%;
+  mask-repeat: no-repeat;
+  transform: rotate(180deg);
+
+  @media (min-width: $desktop-width) {
+    right: 0px;
+    top: calc(50% - 19px);
+  }
+}

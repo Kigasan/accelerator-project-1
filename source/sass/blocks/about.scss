@@ -55,7 +55,7 @@
   }
 }
 
-.about__description {
+.about__description p {
   @include medium-font;
   margin: 0;
   margin-bottom: 36px;
@@ -83,10 +83,39 @@
   }
 }
 
-.about__video {
+.about__mask {
   width: 320px;
   height: 170px;
   display: block;
+  position: relative;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: calc(50% - 38px);
+    left: calc(50% - 38px);
+    width: 72px;
+    height: 72px;
+    // mask-image: url('../../img/sprite/play-button.svg');
+    // mask-size: 12px 12px;
+    // mask-position: center;
+    // mask-repeat: no-repeat;
+    // background-color: $background-primary;
+    border: 2px solid rgba($background-banners, 0.2);
+    border-radius: 50%;
+    z-index: 1;
+  }
+
+  &::after {
+    content: '';
+    position: absolute;
+    top: calc(50% - 26px);
+    left: calc(50% - 26px);
+    width: 52px;
+    height: 52px;
+    background-image: linear-gradient(to right, $button-gradient-start 0%, $button-gradient-end 100%);
+    border-radius: 50%;
+  }
 
   @media (min-width: $min-tablet-width) {
     position: absolute;
@@ -101,4 +130,14 @@
     bottom: 125px;
     left: calc(50% - 180px);
   }
+}
+
+.about__mask-play {
+  position: absolute;
+  top: calc(50% - 6px);
+  left: calc(50% - 6px);
+  width: 12px;
+  height: 12px;
+  fill: $icons-light;
+  z-index: 1;
 }
